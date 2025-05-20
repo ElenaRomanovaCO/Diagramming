@@ -1,0 +1,49 @@
+graph TD
+    %% Client Tier
+    User[User] --> WebUI[Azure Static Web Apps]
+    WebUI --> Chat[/chat endpoint]
+    
+    %% API Tier
+    subgraph "API Tier (App Service)"
+        Chat --> UserProxy
+        Router[/router endpoint]
+        Query[/query endpoint]
+        Update[/update endpoint]
+        Visualize[/visualize endpoint]
+        Search[/search endpoint]
+    end
+    
+    %% AI Agent Tier
+    subgraph "AI Agent Tier (Azure AI Agent Service)"
+        UserProxy[User Proxy Agent] --> DataAnalyst[Data Analyst Agent]
+        DataAnalyst --> SQLAgent[SQL Agent]
+        DataAnalyst --> DBAgent[Database Agent]
+        DataAnalyst --> ResponseAgent[Response Agent]
+        DataAnalyst --> VerificationAgent[Verification Agent]
+        DataAnalyst --> VisAgent[Visualization Agent]
+        DataAnalyst --> SearchAgent[Search Agent]
+        
+        SQLAgent --> DBAgent
+        DBAgent --> ResponseAgent
+        ResponseAgent --> VisAgent
+        SearchAgent --> BingAPI
+    end
+    
+    %% Database Tier
+    subgraph "Database Tier"
+        DBAgent --> PostgreSQL[Azure Database for PostgreSQL]
+        PostgreSQL --> DBAgent
+    end
+    
+    %% External Resources
+    SearchAgent --> BingAPI[Bing Search API]
+    
+    %% Return paths
+    ResponseAgent --> UserProxy
+    VisAgent --> UserProxy
+    SearchAgent --> UserProxy
+    UserProxy --> WebUI
+    
+    %% Base Services
+    AzureOpenAI[Azure OpenAI Service]
+    AzureEmbeddings[Azure AI Embeddings]
