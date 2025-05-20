@@ -1,0 +1,39 @@
+graph TD
+    %% Main Container
+    subgraph "Azure AI Agent Service"
+        %% Orchestrator Section
+        Orchestrator[Orchestrator Agent] --> AgentTools
+        
+        %% Agent Tools Section
+        subgraph "Agent Tools Configuration"
+            AgentTools[Agent Tools]
+            
+            %% Core Function Tools
+            subgraph "Core Function Tools"
+                LangTool[Language Understanding Tool]
+                SQLTool[SQL Conversion Tool]
+                DBTool[Database Interaction Tool]
+                VerifyTool[Verification Tool]
+                ResponseTool[Response Generation Tool]
+            end
+            
+            %% Visualization Tools
+            subgraph "Data Visualization Tools"
+                CreateViz[Create Visualization Function]
+                ChartType[Chart Type Selection Function]
+                DataTransform[Data Transformation Function]
+                ChartCustomize[Chart Customization Function]
+            end
+            
+            %% Tool Connections
+            SQLTool --> DBTool
+            DBTool --> ResponseTool
+        end
+    end
+    
+    %% External Connections
+    DBTool -->|executes SQL| PostgreSQL[Azure Database for PostgreSQL]
+    PostgreSQL -->|results| DBTool
+    
+    %% Azure OpenAI Connection
+    AzureOpenAI[Azure OpenAI Service\nGPT-4o-mini] --> Orchestrator
