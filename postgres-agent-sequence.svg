@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="azure-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0078D4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#336791;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#336791;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ai-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8661C5;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8661C5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="#F7F7F7" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Sequence Diagram: Database Update Process</text>
+
+  <!-- Actors -->
+  <rect x="80" y="80" width="120" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="2" filter="url(#shadow)" />
+  <text x="140" y="115" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">User</text>
+  <line x1="140" y1="140" x2="140" y2="730" stroke="#333" stroke-width="1" stroke-dasharray="4,4" />
+
+  <rect x="240" y="80" width="120" height="60" rx="10" ry="10" fill="white" stroke="#0078D4" stroke-width="2" filter="url(#shadow)" />
+  <text x="300" y="115" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Web UI</text>
+  <line x1="300" y1="140" x2="300" y2="730" stroke="#0078D4" stroke-width="1" stroke-dasharray="4,4" />
+
+  <rect x="400" y="80" width="120" height="60" rx="10" ry="10" fill="white" stroke="#0078D4" stroke-width="2" filter="url(#shadow)" />
+  <text x="460" y="115" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">API Service</text>
+  <line x1="460" y1="140" x2="460" y2="730" stroke="#0078D4" stroke-width="1" stroke-dasharray="4,4" />
+
+  <rect x="560" y="80" width="120" height="60" rx="10" ry="10" fill="white" stroke="#8661C5" stroke-width="2" filter="url(#shadow)" />
+  <text x="620" y="115" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">AI Agent</text>
+  <line x1="620" y1="140" x2="620" y2="730" stroke="#8661C5" stroke-width="1" stroke-dasharray="4,4" />
+  
+  <!-- Interactions -->
+  <!-- Update request -->
+  <rect x="130" y="170" width="20" height="400" fill="#F0F0F0" stroke="#333" stroke-width="1" />
+  <rect x="290" y="190" width="20" height="360" fill="#E6F2FA" stroke="#0078D4" stroke-width="1" />
+  <rect x="450" y="210" width="20" height="320" fill="#E6F2FA" stroke="#0078D4" stroke-width="1" />
+  <rect x="610" y="230" width="20" height="280" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+
+  <!-- Message: User to Web UI -->
+  <path d="M150,190 L290,190" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="175" y="170" width="90" height="20" rx="5" ry="5" fill="white" stroke="#333" stroke-width="1" />
+  <text x="220" y="185" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Update request</text>
+
+  <!-- Message: Web UI to API -->
+  <path d="M310,210 L450,210" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="335" y="190" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="380" y="205" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">HTTP POST</text>
+
+  <!-- Message: API to AI Agent -->
+  <path d="M470,230 L610,230" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="485" y="210" width="110" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="540" y="225" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Process update</text>
+
+  <!-- Message: AI Agent to API (Confirmation) -->
+  <path d="M610,280 L470,280" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="495" y="260" width="90" height="20" rx="5" ry="5" fill="white" stroke="#8661C5" stroke-width="1" />
+  <text x="540" y="275" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Needs confirmation</text>
+
+  <!-- Message: API to Web UI (Confirmation) -->
+  <path d="M450,300 L310,300" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="335" y="280" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="380" y="295" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Confirmation required</text>
+
+  <!-- Message: Web UI to User (Confirmation) -->
+  <path d="M290,320 L150,320" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="175" y="300" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="220" y="315" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Confirm update?</text>
+
+  <!-- User confirmation decision point -->
+  <path d="M150,360 L290,360" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="175" y="340" width="90" height="20" rx="5" ry="5" fill="white" stroke="#333" stroke-width="1" />
+  <text x="220" y="355" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">User confirms</text>
+
+  <!-- Message: Web UI to API (Confirmation) -->
+  <path d="M310,380 L450,380" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="335" y="360" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="380" y="375" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Confirm update</text>
+
+  <!-- Message: API to AI Agent (Confirmation) -->
+  <path d="M470,400 L610,400" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="485" y="380" width="110" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="540" y="395" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Execute update</text>
+
+  <!-- Message: AI to DB (not shown directly) -->
+  <rect x="630" y="420" width="80" height="40" rx="5" ry="5" fill="#F0F8FF" stroke="#336791" stroke-width="1" />
+  <text x="670" y="435" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Execute SQL</text>
+  <text x="670" y="450" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UPDATE query</text>
+
+  <!-- Message: AI Agent to API (Success) -->
+  <path d="M610,480 L470,480" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="495" y="460" width="90" height="20" rx="5" ry="5" fill="white" stroke="#8661C5" stroke-width="1" />
+  <text x="540" y="475" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Update success</text>
+
+  <!-- Message: API to Web UI (Success) -->
+  <path d="M450,500 L310,500" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="335" y="480" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="380" y="495" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Success response</text>
+
+  <!-- Message: Web UI to User (Success) -->
+  <path d="M290,520 L150,520" stroke="#0078D4" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <rect x="175" y="500" width="90" height="20" rx="5" ry="5" fill="white" stroke="#0078D4" stroke-width="1" />
+  <text x="220" y="515" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Update complete</text>
+
+  <!-- User Acknowledges -->
+  <rect x="130" y="540" width="20" height="10" fill="#333" stroke="#333" stroke-width="1" />
+
+  <!-- Sequence description -->
+  <rect x="80" y="600" width="640" height="180" rx="10" ry="10" fill="white" stroke="#CCCCCC" stroke-width="1" />
+  <text x="100" y="625" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Database Update Sequence:</text>
+  <text x="100" y="655" font-family="Arial, sans-serif" font-size="12">1. User submits natural language update request (e.g., "Update Laptop Pro's price to $1199.99")</text>
+  <text x="100" y="675" font-family="Arial, sans-serif" font-size="12">2. The request is sent through the Web UI to the API service</text>
+  <text x="100" y="695" font-family="Arial, sans-serif" font-size="12">3. The API routes the request to the AI Agent, which identifies it as an update operation</text>
+  <text x="100" y="715" font-family="Arial, sans-serif" font-size="12">4. The AI Agent generates a SQL UPDATE statement but requires confirmation before execution</text>
+  <text x="100" y="735" font-family="Arial, sans-serif" font-size="12">5. User reviews and confirms the update operation</text>
+  <text x="100" y="755" font-family="Arial, sans-serif" font-size="12">6. The AI Agent executes the confirmed SQL operation against PostgreSQL</text>
+  <text x="100" y="775" font-family="Arial, sans-serif" font-size="12">7. Success confirmation is returned to the user through the chain of components</text>
+</svg>

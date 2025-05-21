@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="azure-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0078D4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#336791;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#336791;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ai-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8661C5;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8661C5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F7F7F7" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Data Flow Diagram: Natural Language Query Process</text>
+
+  <!-- User -->
+  <rect x="50" y="100" width="140" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="2" filter="url(#shadow)" />
+  <text x="120" y="135" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">User</text>
+
+  <!-- Web UI -->
+  <rect x="50" y="270" width="140" height="60" rx="10" ry="10" fill="white" stroke="#0078D4" stroke-width="2" filter="url(#shadow)" />
+  <text x="120" y="305" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Web UI</text>
+
+  <!-- API -->
+  <rect x="250" y="270" width="140" height="60" rx="10" ry="10" fill="white" stroke="#0078D4" stroke-width="2" filter="url(#shadow)" />
+  <text x="320" y="305" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">API Service</text>
+
+  <!-- AI Agent -->
+  <rect x="450" y="270" width="140" height="60" rx="10" ry="10" fill="white" stroke="#8661C5" stroke-width="2" filter="url(#shadow)" />
+  <text x="520" y="305" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">AI Agent</text>
+
+  <!-- PostgreSQL -->
+  <rect x="650" y="270" width="140" height="60" rx="10" ry="10" fill="white" stroke="#336791" stroke-width="2" filter="url(#shadow)" />
+  <text x="720" y="305" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">PostgreSQL</text>
+
+  <!-- Results -->
+  <rect x="50" y="440" width="140" height="60" rx="10" ry="10" fill="white" stroke="#333" stroke-width="2" filter="url(#shadow)" />
+  <text x="120" y="475" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Natural Language</text>
+  <text x="120" y="495" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Summary</text>
+
+  <!-- Flow Arrows -->
+  <!-- Natural Language Query -->
+  <path d="M120,160 L120,270" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <rect x="50" y="190" width="140" height="30" rx="15" ry="15" fill="white" stroke="#333" stroke-width="1" />
+  <text x="120" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Natural Language Query</text>
+
+  <!-- Web UI to API -->
+  <path d="M190,300 L250,300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="220" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">HTTP</text>
+
+  <!-- API to AI -->
+  <path d="M390,300 L450,300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="420" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Azure AI SDK</text>
+
+  <!-- AI to PostgreSQL -->
+  <path d="M590,300 L650,300" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="620" y="290" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">SQL</text>
+
+  <!-- PostgreSQL to AI -->
+  <path d="M650,330 C600,350 550,350 500,330" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <rect x="540" y="340" width="70" height="24" rx="12" ry="12" fill="white" stroke="#333" stroke-width="1" />
+  <text x="575" y="357" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Raw Results</text>
+
+  <!-- AI to API -->
+  <path d="M450,330 C400,350 350,350 300,330" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <rect x="340" y="340" width="70" height="24" rx="12" ry="12" fill="white" stroke="#333" stroke-width="1" />
+  <text x="375" y="357" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Summary</text>
+
+  <!-- API to Web UI -->
+  <path d="M250,330 C200,350 150,350 100,330" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <rect x="140" y="340" width="70" height="24" rx="12" ry="12" fill="white" stroke="#333" stroke-width="1" />
+  <text x="175" y="357" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Response</text>
+
+  <!-- Web UI to Result -->
+  <path d="M120,330 L120,440" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+
+  <!-- Step annotations -->
+  <circle cx="120" y="180" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="120" y="185" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">1</text>
+
+  <circle cx="220" y="300" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="220" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">2</text>
+
+  <circle cx="420" y="300" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="420" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">3</text>
+
+  <circle cx="620" y="300" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="620" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">4</text>
+
+  <circle cx="575" y="340" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="575" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">5</text>
+
+  <circle cx="375" y="340" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="375" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">6</text>
+
+  <circle cx="175" y="340" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="175" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">7</text>
+
+  <circle cx="120" y="410" r="15" fill="white" stroke="#333" stroke-width="1.5" />
+  <text x="120" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">8</text>
+
+  <!-- Process description -->
+  <rect x="250" y="440" width="500" height="120" rx="10" ry="10" fill="white" stroke="#CCCCCC" stroke-width="1" />
+  <text x="270" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Natural Language Query Process:</text>
+  <text x="270" y="490" font-family="Arial, sans-serif" font-size="12">1. User enters a natural language query (e.g., "Show me top selling products")</text>
+  <text x="270" y="510" font-family="Arial, sans-serif" font-size="12">2. Web UI sends the query to the API service via HTTP request</text>
+  <text x="270" y="530" font-family="Arial, sans-serif" font-size="12">3. API service passes the query to the AI Agent via Azure AI SDK</text>
+  <text x="270" y="550" font-family="Arial, sans-serif" font-size="12">4. AI Agent generates SQL from natural language and executes against PostgreSQL</text>
+  <text x="500" y="490" font-family="Arial, sans-serif" font-size="12">5. PostgreSQL returns raw query results to AI Agent</text>
+  <text x="500" y="510" font-family="Arial, sans-serif" font-size="12">6. AI Agent creates a natural language summary of results</text>
+  <text x="500" y="530" font-family="Arial, sans-serif" font-size="12">7. Summary is returned through API to the Web UI</text>
+  <text x="500" y="550" font-family="Arial, sans-serif" font-size="12">8. User receives human-friendly natural language response</text>
+</svg>

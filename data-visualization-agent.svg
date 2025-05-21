@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="agent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8661C5;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8661C5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#336791;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#336791;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chart-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#107C10;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#107C10;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+    
+    <!-- Visualization components -->
+    <symbol id="pie-chart" viewBox="0 0 50 50">
+      <path d="M25,5 A20,20 0 0,1 45,25 L25,25 Z" fill="#4285F4" />
+      <path d="M45,25 A20,20 0 0,1 25,45 L25,25 Z" fill="#EA4335" />
+      <path d="M25,45 A20,20 0 0,1 5,25 L25,25 Z" fill="#FBBC05" />
+      <path d="M5,25 A20,20 0 0,1 25,5 L25,25 Z" fill="#34A853" />
+    </symbol>
+    
+    <symbol id="bar-chart" viewBox="0 0 50 50">
+      <rect x="5" y="35" width="5" height="10" fill="#4285F4" />
+      <rect x="15" y="25" width="5" height="20" fill="#EA4335" />
+      <rect x="25" y="15" width="5" height="30" fill="#FBBC05" />
+      <rect x="35" y="5" width="5" height="40" fill="#34A853" />
+    </symbol>
+    
+    <symbol id="line-chart" viewBox="0 0 50 50">
+      <polyline points="5,40 15,30 25,35 35,15 45,25" stroke="#4285F4" stroke-width="2" fill="none" />
+      <circle cx="5" cy="40" r="2" fill="#4285F4" />
+      <circle cx="15" cy="30" r="2" fill="#4285F4" />
+      <circle cx="25" cy="35" r="2" fill="#4285F4" />
+      <circle cx="35" cy="15" r="2" fill="#4285F4" />
+      <circle cx="45" cy="25" r="2" fill="#4285F4" />
+    </symbol>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="800" fill="#F7F7F7" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Data Visualization Agent Capabilities</text>
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="16" font-style="italic" text-anchor="middle">Generating Visual Representations from Database Queries</text>
+  
+  <!-- Main container -->
+  <rect x="50" y="100" width="700" height="650" rx="10" ry="10" fill="white" stroke="#107C10" stroke-width="2" filter="url(#shadow)" />
+  
+  <!-- Header Section -->
+  <rect x="70" y="120" width="660" height="80" rx="8" ry="8" fill="#F0FFF0" stroke="#107C10" stroke-width="1.5" />
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#107C10">Data Visualization Agent</text>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Converts database query results into visual representations based on user requests</text>
+  
+  <!-- Process Flow Section -->
+  <text x="400" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Visualization Process Flow</text>
+  
+  <!-- Process Steps -->
+  <rect x="70" y="250" width="150" height="60" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="145" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Receive Data</text>
+  
+  <rect x="270" y="250" width="150" height="60" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="345" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Analyze Request</text>
+  
+  <rect x="470" y="250" width="150" height="60" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="545" y="285" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Format Data</text>
+  
+  <rect x="270" y="350" width="150" height="60" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="345" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Generate Chart</text>
+  
+  <!-- Process Flow Arrows -->
+  <path d="M220,280 L270,280" stroke="#107C10" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M420,280 L470,280" stroke="#107C10" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M545,310 L545,330 L345,330 L345,350" stroke="#107C10" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Chart Types Section -->
+  <rect x="70" y="450" width="660" height="280" rx="8" ry="8" fill="#F0FFF0" stroke="#107C10" stroke-width="1.5" />
+  <text x="400" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Supported Chart Types</text>
+  
+  <!-- Chart Types -->
+  <rect x="100" y="500" width="180" height="210" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="190" y="525" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Data Visualization</text>
+  <use xlink:href="#pie-chart" x="150" y="540" width="80" height="80" />
+  <text x="190" y="645" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Pie Charts</text>
+  <text x="190" y="665" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">(Categories, Proportions)</text>
+  <text x="190" y="685" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">e.g., "Show sales by category"</text>
+  
+  <rect x="310" y="500" width="180" height="210" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="400" y="525" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Time Series</text>
+  <use xlink:href="#line-chart" x="360" y="540" width="80" height="80" />
+  <text x="400" y="645" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Line Charts</text>
+  <text x="400" y="665" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">(Trends, Timelines)</text>
+  <text x="400" y="685" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">e.g., "Chart monthly sales"</text>
+  
+  <rect x="520" y="500" width="180" height="210" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="610" y="525" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Comparison</text>
+  <use xlink:href="#bar-chart" x="570" y="540" width="80" height="80" />
+  <text x="610" y="645" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Bar/Column Charts</text>
+  <text x="610" y="665" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">(Comparisons, Rankings)</text>
+  <text x="610" y="685" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">e.g., "Compare top products"</text>
+  
+  <!-- Integration Notes -->
+  <rect x="70" y="740" width="660" height="60" rx="8" ry="8" fill="white" stroke="#107C10" stroke-width="1.5" />
+  <text x="90" y="770" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#107C10">Implementation Notes:</text>
+  <text x="270" y="770" font-family="Arial, sans-serif" font-size="14" fill="#333">Uses React with Recharts for dynamic interactive visualizations</text>
+  <text x="270" y="790" font-family="Arial, sans-serif" font-size="14" fill="#333">Integrates with database results through a custom React component</text>
+</svg>

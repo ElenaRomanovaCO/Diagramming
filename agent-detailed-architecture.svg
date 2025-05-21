@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="900" viewBox="0 0 800 900">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="agent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8661C5;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8661C5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pg-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#336791;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#336791;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="azure-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0078D4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Arrow marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="900" fill="#F7F7F7" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">AI Agent Architecture: Detailed Agentic Components</text>
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="16" font-style="italic" text-anchor="middle">Internal Architecture of the GPT-4o Based AI Agent</text>
+  
+  <!-- AI Agent Main Container -->
+  <rect x="50" y="100" width="700" height="750" rx="10" ry="10" fill="white" stroke="#8661C5" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#8661C5">Azure AI Agent Service</text>
+  
+  <!-- Input Processing -->
+  <rect x="80" y="150" width="640" height="80" rx="8" ry="8" fill="#F5F0FF" stroke="#8661C5" stroke-width="1.5" />
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Input Processing</text>
+  <text x="400" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Natural language understanding, query classification, and intent recognition</text>
+  
+  <!-- Core GPT-4o Brain -->
+  <rect x="280" y="250" width="240" height="100" rx="8" ry="8" fill="#F5F0FF" stroke="#8661C5" stroke-width="2.5" />
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">GPT-4o Foundation Model</text>
+  <text x="400" y="305" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Reasoning, planning, and</text>
+  <text x="400" y="325" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">natural language generation</text>
+  
+  <!-- Agent Components -->
+  <rect x="80" y="370" width="640" height="280" rx="8" ry="8" fill="#F5F0FF" stroke="#8661C5" stroke-width="1.5" />
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Specialized Agents</text>
+  
+  <!-- SQL Agent -->
+  <rect x="100" y="420" width="180" height="210" rx="8" ry="8" fill="white" stroke="#8661C5" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="190" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">SQL Generation Agent</text>
+  <rect x="120" y="460" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="190" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Schema Understanding</text>
+  <rect x="120" y="510" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="190" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">NL → SQL Translation</text>
+  <rect x="120" y="560" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="190" y="585" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Query Optimization</text>
+  
+  <!-- Verification Agent -->
+  <rect x="310" y="420" width="180" height="210" rx="8" ry="8" fill="white" stroke="#8661C5" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="400" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Verification Agent</text>
+  <rect x="330" y="460" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">SQL Validation</text>
+  <rect x="330" y="510" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="400" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Safety Checking</text>
+  <rect x="330" y="560" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="400" y="585" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Update Confirmation</text>
+  
+  <!-- Summarization Agent -->
+  <rect x="520" y="420" width="180" height="210" rx="8" ry="8" fill="white" stroke="#8661C5" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="610" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Summarization Agent</text>
+  <rect x="540" y="460" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="610" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Result Analysis</text>
+  <rect x="540" y="510" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="610" y="535" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">NL Summary Creation</text>
+  <rect x="540" y="560" width="140" height="40" rx="5" ry="5" fill="#F5F0FF" stroke="#8661C5" stroke-width="1" />
+  <text x="610" y="585" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Insight Extraction</text>
+  
+  <!-- Agent Tools Section -->
+  <rect x="80" y="670" width="640" height="160" rx="8" ry="8" fill="#F5F0FF" stroke="#8661C5" stroke-width="1.5" />
+  <text x="400" y="700" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Agent Tools and Integration</text>
+  
+  <!-- PostgreSQL Tool -->
+  <rect x="100" y="720" width="180" height="90" rx="8" ry="8" fill="white" stroke="#336791" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="190" y="745" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#336791">PostgreSQL Tool</text>
+  <rect x="120" y="760" width="140" height="30" rx="5" ry="5" fill="#F0F8FF" stroke="#336791" stroke-width="1" />
+  <text x="190" y="780" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Query Execution</text>
+  
+  <!-- Vector Embedding Tool -->
+  <rect x="310" y="720" width="180" height="90" rx="8" ry="8" fill="white" stroke="#336791" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="400" y="745" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#336791">Vector Embedding Tool</text>
+  <rect x="330" y="760" width="140" height="30" rx="5" ry="5" fill="#F0F8FF" stroke="#336791" stroke-width="1" />
+  <text x="400" y="780" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Semantic Search</text>
+  
+  <!-- Memory Management Tool -->
+  <rect x="520" y="720" width="180" height="90" rx="8" ry="8" fill="white" stroke="#0078D4" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="610" y="745" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0078D4">Memory Management</text>
+  <rect x="540" y="760" width="140" height="30" rx="5" ry="5" fill="#E6F2FA" stroke="#0078D4" stroke-width="1" />
+  <text x="610" y="780" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Conversation History</text>
+  
+  <!-- Connection lines between components -->
+  <!-- Input to GPT-4o -->
+  <path d="M400,230 L400,250" stroke="#8661C5" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- GPT-4o to Agents -->
+  <path d="M400,350 L400,370" stroke="#8661C5" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- SQL Agent connections -->
+  <path d="M190,350 Q190,385 190,420" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,2" />
+  
+  <!-- Verification Agent connections -->
+  <path d="M400,350 L400,420" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,2" />
+  
+  <!-- Summarization Agent connections -->
+  <path d="M610,350 Q610,385 610,420" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="4,2" />
+  
+  <!-- Agents to Tools -->
+  <path d="M190,630 L190,720" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M400,630 L400,720" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M610,630 L610,720" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Cross-agent communication -->
+  <path d="M280,525 L310,525" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M490,525 L520,525" stroke="#8661C5" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Annotations -->
+  <text x="230" y="350" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Multi-agent</text>
+  <text x="230" y="365" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">orchestration</text>
+  
+  <text x="420" y="680" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#666">Function calling</text>
+  <text x="420" y="695" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#666">and tool integration</text>
+  
+  <text x="295" y="510" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">SQL validation</text>
+  <text x="505" y="510" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">Results</text>
+</svg>
