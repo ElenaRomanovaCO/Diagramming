@@ -1,0 +1,29 @@
+code_testing_system/
+├── main.py                    # ✅ Main entry point with CLI
+├── requirements.txt           # ✅ All dependencies
+├── config/
+│   ├── __init__.py           # ✅ Config package
+│   └── settings.py           # ✅ Gemini API & environment setup
+├── agents/
+│   ├── __init__.py           # ✅ Agents package
+│   ├── supervisor.py         # ✅ Workflow orchestrator
+│   ├── test_writer.py        # ✅ Pytest test generator
+│   ├── test_evaluator.py     # ✅ Test quality reviewer
+│   ├── test_runner.py        # ✅ Allure test executor
+│   ├── troubleshooter.py     # ✅ Failure analyzer & fixer
+│   └── troubleshooter_critic.py # ✅ Fix quality reviewer
+├── tools/
+│   ├── __init__.py           # ✅ Tools package
+│   ├── file_handler.py       # ✅ File I/O operations
+│   ├── code_analyzer.py      # ✅ Code structure analysis
+│   └── test_executor.py      # ✅ Pytest + Allure execution
+├── utils/
+│   ├── __init__.py           # ✅ Utils package
+│   ├── graph_builder.py      # ✅ LangGraph construction
+│   └── file_utils.py         # ✅ File handling utilities
+├── input/                    # 📂 Input .py files directory
+└── output/                   # 📂 Generated files directory
+    ├── tests/                # 📝 Generated test files
+    ├── reports/              # 📊 Allure HTML reports
+    ├── failures/             # ❌ Failure output files
+    └── analysis/             # 🔍 Analysis files
