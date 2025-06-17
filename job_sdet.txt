@@ -1,0 +1,65 @@
+# Quality Engineering Lead / Senior Quality Engineering Consultant
+
+## Summary of This Role
+
+Leads the design and implementation of comprehensive quality engineering practices across the organization. Performs strategic analysis to outline best quality practices and designs technical implementation solutions that enhance software development lifecycle quality. Communicates quality initiatives to management and cross-functional teams while driving adoption of quality engineering improvements. Combines extensive testing expertise with project management capabilities to ensure successful delivery of quality transformation initiatives. Acts as subject matter expert and consultant for quality engineering practices, methodologies, and tools.
+
+## What Part Will You Play?
+
+- **Quality Strategy Development & Best Practices**: Research, evaluate, and outline industry-leading quality engineering practices tailored to organizational needs. Develop comprehensive quality frameworks, standards, and guidelines for consistent implementation across development teams. Identify process improvement opportunities and continuous quality measures across the entire software development lifecycle. Create quality paradigms that provide real-time quality feedback through automation and continuous testing approaches.
+
+- **Technical Implementation Design**: Design and architect technical solutions for implementing quality engineering practices across multiple teams and projects. Develop technical roadmaps for quality tool integration, test automation frameworks, and CI/CD pipeline enhancements. Create moderately complex to complex software tools, frameworks and utilities for validation/verification activities. Design testing strategies that incorporate test driven development (TDD) and behavior driven development (BDD) methodologies. Integrate automated testing suites with continuous integration tools for frequent execution and comprehensive quality coverage.
+
+- **Stakeholder Communication & Management Liaison**: Collaborate with senior management to align quality initiatives with business objectives and communicate complex technical concepts to non-technical stakeholders. Facilitate cross-functional meetings and workshops with development, operations, product teams, and external clients. Build consensus and drive adoption of quality practices across diverse teams and departments. Demonstrate broad knowledge of multiple environments by evaluating, interpreting and communicating understanding of various system components to leadership.
+
+- **Presentation & Training Delivery**: Prepare and deliver compelling presentations to various audiences, from individual contributors to C-level executives on quality engineering topics. Conduct training sessions and workshops on automated testing strategies, quality best practices, and continuous integration methodologies. Create educational materials, documentation, and knowledge-sharing resources for teams. Present progress reports, quality metrics, ROI analysis, and continuous improvement recommendations to stakeholders.
+
+- **Project Management & Coordination**: Plan, coordinate, and execute quality improvement initiatives across multiple concurrent projects and teams. Manage project timelines, resource allocation, deliverables, and cross-functional dependencies. Act as single point of contact for assigned complex quality engineering projects. Coordinate test activities assigned to test teams including reviewing test plans, cases, scripts, and prioritizing execution. Track and report on project progress, risks, outcomes, and provide feedback to internal and external clients.
+
+- **Testing Expertise & Technical Leadership**: Apply extensive testing experience across functional, performance, security, API, mobile, and service virtualization testing. Conduct impact analysis and evaluate effects on regression test suites, code testability, and application performance. Develop and maintain automation frameworks supporting unit, component, integration, and end-to-end testing. Write and execute application tests at source code level including white box testing approaches. Analyze systems and database performance during load testing and identify performance bottlenecks.
+
+## What Are We Looking For in This Role?
+
+**Minimum Qualifications**
+- Bachelor's Degree in Software Engineering, Information Systems, Computer Science, or other Technical degree; additional relevant experience in lieu of degree will be considered
+- Typically Minimum 8+ Years Relevant Experience in software testing, quality engineering, coding, designing, and developing
+- Extensive hands-on testing experience across multiple testing types (functional, performance, security, API, mobile testing)
+- Proven experience in test automation frameworks and continuous integration practices
+- Demonstrated experience in stakeholder communication and cross-functional collaboration
+- Project management experience with ability to coordinate complex initiatives
+
+**Preferred Qualifications**
+- Master's Degree in Software Engineering, Information Systems, or other Technical degree
+- Typically Minimum 10+ Years Relevant Experience developing automated testing strategies in variety of environments and frameworks
+- Project Management certification (PMP, Scrum Master, Agile certifications)
+- Experience in consulting or advisory roles driving organizational change
+- International Software Testing Qualifications Board (ISTQB) Certification
+
+## What Are Our Desired Skills and Capabilities?
+
+**Skills / Knowledge**: Seasoned professional with wide-ranging experience using professional concepts and company objectives to resolve complex quality engineering issues in creative and effective ways. Demonstrates expert-level understanding of quality engineering specialization with ability to mentor and guide team members.
+
+**Job Complexity**: Works on complex, diverse quality engineering problems requiring in-depth evaluation of variable factors across multiple environments and frameworks. Exercises advanced judgment in selecting methods, techniques, and evaluation criteria. Networks with key contacts outside area of expertise including senior internal and external personnel.
+
+**Supervision**: Determines methods and procedures on new quality engineering assignments and coordinates activities of other personnel. Provides mentoring and guidance to team members, helping solve complex quality problems.
+
+**Technical Skills Required**:
+- **Software Development Life Cycle / Testing Methodologies**: Agile (Scrum, Kanban), Test Driven Development (TDD), Behavior Driven Development (BDD), DevOps practices
+- **Programming Languages**: Java, Python, Groovy, SQL, JavaScript, or other relevant languages for test automation
+- **Testing Tools**: Selenium, Cypress, API testing tools (SoapUI, Postman), Performance testing (JMeter), Security testing tools, Mobile testing frameworks, RPA tools
+- **CI/CD & DevOps**: Jenkins, GitLab CI, Azure DevOps, continuous integration and deployment practices
+- **Source Code Management**: Git, GitHub, version control best practices
+- **Cloud Technologies**: AWS, Azure, GCP - exposure and understanding required
+- **Application Lifecycle Management**: Tools for test case management, defect tracking, and project coordination
+
+**Communication & Leadership Skills**:
+- Excellent written and verbal communication with ability to influence at all organizational levels
+- Strong presentation skills with experience presenting to executive leadership
+- Change management and organizational influence capabilities
+- Collaborative leadership style with proven ability to drive consensus
+
+**Additional Capabilities**:
+- Strategic thinking and complex problem-solving abilities
+- Experience with quality metrics, measurement programs, and ROI analysis
+- Knowledge of compliance requirements (security, payment card industry standards)
+- Continuous learning mindset with ability to stay current with emerging quality engineering trends
