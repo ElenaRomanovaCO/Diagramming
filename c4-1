@@ -1,0 +1,57 @@
+PlantUML Online: http://www.plantuml.com/plantuml/uml/
+VS Code: PlantUML extension
+Confluence: PlantUML macro
+GitHub: Renders automatically in README files
+
+
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Container Diagram - ATO Interactive Dashboard
+
+Person(user, "ATO User", "EA, Fed Architect, PM&PO, System Architect, Security Reviewer")
+Person(exec, "Executive", "Leadership, Auditor")
+
+System_Boundary(ato_system, "ATO Dashboard System") {
+    Container(web_app, "React Dashboard", "React 18, TypeScript", "Interactive ATO process dashboard with real-time collaboration")
+    Container(chatbot, "Chatbot Service", "Cloud Functions, Node.js", "Conversational AI for ATO guidance and assistance")
+    Container(nlp_agent, "NLP Data Agent", "Cloud Functions, Node.js", "Natural language data insights and analytics")
+    Container(api_gateway, "API Gateway", "Cloud Functions", "REST APIs for ATO process management")
+    Container(workflow, "Workflow Engine", "Cloud Workflows", "Process orchestration and automation")
+    
+    ContainerDb(firestore, "Real-time Database", "Firestore", "Stores ATO requests, user data, real-time updates")
+    ContainerDb(bigquery, "Analytics Database", "BigQuery", "Historical data, metrics, reporting")
+    ContainerDb(storage, "File Storage", "Cloud Storage", "Documents, artifacts, compliance reports")
+    ContainerDb(vector_db, "Vector Database", "Vertex AI Vector Search", "Embeddings for semantic search")
+}
+
+System_Ext(vertex_ai, "Vertex AI Platform", "LLM, ML models for conversation and insights")
+System_Ext(dialogflow, "Dialogflow CX", "Conversation management and intent recognition")
+System_Ext(doc_ai, "Document AI", "Document processing and text extraction")
+System_Ext(sso, "Enterprise SSO", "Authentication provider")
+System_Ext(slack, "Slack API", "Team notifications")
+System_Ext(security_tools, "Security Tools", "SonarQube, Veracode, etc.")
+
+Rel(user, web_app, "Uses", "HTTPS")
+Rel(exec, web_app, "Views dashboards", "HTTPS")
+
+Rel(web_app, api_gateway, "Makes API calls", "HTTPS/REST")
+Rel(web_app, chatbot, "Chat interactions", "WebSocket")
+Rel(web_app, nlp_agent, "NL queries", "HTTPS")
+
+Rel(chatbot, dialogflow, "Intent recognition", "API")
+Rel(chatbot, vertex_ai, "LLM processing", "API")
+Rel(chatbot, vector_db, "Semantic search", "API")
+
+Rel(nlp_agent, vertex_ai, "Text analysis", "API")
+Rel(nlp_agent, doc_ai, "Document processing", "API")
+Rel(nlp_agent, bigquery, "Data queries", "SQL")
+
+Rel(api_gateway, firestore, "Read/Write", "Native")
+Rel(api_gateway, workflow, "Triggers", "API")
+Rel(workflow, firestore, "Updates", "Native")
+
+Rel(api_gateway, sso, "Authentication", "OAuth")
+Rel(api_gateway, slack, "Notifications", "API")
+Rel(api_gateway, security_tools, "Integration", "API")
+@enduml
